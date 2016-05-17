@@ -1,0 +1,32 @@
+function NotesApplication(author){
+	this.author = author;
+	this.notes = [];
+}
+
+NotesApplication.prototype.create = function(note_content){
+	this.notes.push[note_content];
+};
+
+NotesApplication.prototype.listNotes = function(){
+	for (i=0; i<this.notes.length; i++;){
+		console.log("Note ID: " + i)
+		console.log(this.notes[i])
+		console.log("By Author "+ this.author)
+	};
+	
+};
+
+NotesApplication.prototype.get(note_id){
+	return this.notes[note_id];
+}
+
+
+
+search(search_text) - This function take a search string, search_text and returns all the notes with that text within it in the following format
+
+Showing results for search ‘[<search_text>]’
+
+Note ID: [note_id]
+    [NOTE_CONTENT]
+
+    By Author [author]

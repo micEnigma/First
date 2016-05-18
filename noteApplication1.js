@@ -12,7 +12,7 @@ NotesApplication.prototype.create = function(note_content){
 		this.notes.push(note_content);
 	}
 	else{
-		console.log("nothing added...until you type text")
+		console.log(note_content + " not added...please type text")
 	};
 };
 
@@ -63,3 +63,15 @@ NotesApplication.prototype.delete = function(note_id){
 NotesApplication.prototype.edit = function(note_id, new_content){
 	this.notes[note_id]= new_content;
 };
+
+
+
+
+
+// Test code
+
+var bob = new NotesApplication("Bobby")
+var testText = ["ffhffjfjhrasjkbzdf", yufuguguigihiu, 12456, "gdghfhdsrtyuj", this.author]
+for(i=0; i<testText.length; i++){
+	bob.create(i);
+}

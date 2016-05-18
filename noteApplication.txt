@@ -1,3 +1,5 @@
+// Create NotesApplication Class
+
 function NotesApplication(author){
 	this.author = author;
 	this.notes = [];
@@ -16,17 +18,33 @@ NotesApplication.prototype.listNotes = function(){
 	
 };
 
-NotesApplication.prototype.get(note_id){
+NotesApplication.prototype.get = function(note_id){
 	return this.notes[note_id];
+};
+
+NotesApplication.prototype.search = function(search_text){
+	for (x in this.notes){
+		for (i=0; i<this.notes.length; i++){
+			if(x.substring(i,(i+search_text)) === search_text){
+				console.log("Showing results for search " + search_text);
+				console.log(this.listNotes());
+			};
+		};
+		
+	};
+	
+};
+
+NotesApplication.prototype.delete = function(note_id){
+	delete this.notes[note_id]
 }
 
 
+NotesApplication.prototype.edit = function(note_id, new_content){
+	this.notes[note_id]= new_content;
+}
 
-search(search_text) - This function take a search string, search_text and returns all the notes with that text within it in the following format
+var bob = new NotesApplication("Bob") 
 
-Showing results for search ‘[<search_text>]’
 
-Note ID: [note_id]
-    [NOTE_CONTENT]
 
-    By Author [author]

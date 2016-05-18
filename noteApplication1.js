@@ -71,7 +71,7 @@ NotesApplication.prototype.edit = function(note_id, new_content){
 // Test code
 
 var bob = new NotesApplication("Bobby")
-var testText = ["ffhffjfjhrasjkbzdf", yufuguguigihiu, 12456, "gdghfhdsrtyuj", this.author]
+var testText = ["ffhffjfjhrasjkbzdf", 12456, "gdghfhdsrtyuj", this.author]
 for(i=0; i<testText.length; i++){
-	bob.create(i);
+	bob.create(testText[i]);
 }

@@ -3,7 +3,7 @@
 function NotesApplication(author){
 	this.author = author;
 	this.notes = [];
-};
+}
 
 // Method for adding note_content to NotesApplication Class Objects
 

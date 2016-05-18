@@ -8,7 +8,12 @@ function NotesApplication(author){
 // Method for adding note_content to NotesApplication Class Objects
 
 NotesApplication.prototype.create = function(note_content){
-	this.notes.push(note_content);
+	if(typeof note_content === "string"){
+		this.notes.push(note_content);
+	}
+	else{
+		console.log("nothing added...until you type text")
+	};
 };
 
 // Method for listing content in NotesApplication Class Objects

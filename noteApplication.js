@@ -12,7 +12,7 @@ NotesApplication.prototype.create = function(note_content){
 		this.notes.push(note_content);
 	}
 	else{
-		console.log(note_content + " not added...please type text")
+		console.log("nothing added...until you type text")
 	};
 };
 
@@ -24,7 +24,6 @@ NotesApplication.prototype.listNotes = function(){
 		console.log(this.notes[i]);
 		console.log("By Author "+ this.author);
 	};
-	return "Number of notes by " + this.author + " listed above: " + this.notes.length;
 };
 
 // Method for retrieving content by note_id
@@ -64,19 +63,3 @@ NotesApplication.prototype.delete = function(note_id){
 NotesApplication.prototype.edit = function(note_id, new_content){
 	this.notes[note_id]= new_content;
 };
-
-
-
-
-
-// Test code inputs
-
-var bob = new NotesApplication("Bobby")
-//var testText = ["ffhffjfjhrasjkbzdf", 12456, "gdghfhdsrtyuj", this.author, ugabvjkakjb];
-//for(i=0; i<testText.length; i++){
-//	bob.create(testText[i]);
-//};
-//console.log(bob.notes);
-//bob.listNotes();
-//bob.get(0);
-//bob.edit(2, "dffgdhytjhgjjk")

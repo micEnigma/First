@@ -24,7 +24,7 @@ NotesApplication.prototype.listNotes = function(){
 		console.log(this.notes[i]);
 		console.log("By Author "+ this.author);
 	};
-	return "Number of notes by " + this.author + " listed above: " + this.notes.length;
+	return "Number of notes by " + this.author + " listed: " + this.notes.length;
 };
 
 // Method for retrieving content by note_id
@@ -32,7 +32,6 @@ NotesApplication.prototype.listNotes = function(){
 NotesApplication.prototype.get = function(note_id){
 	return this.notes[note_id];
 };
-
 
 // Method for searching content in NotesApplication Class Objects
 
@@ -44,7 +43,6 @@ NotesApplication.prototype.search = function(search_text){
 				console.log("Showing results for search " + search_text);
 				console.log(this.notes[i]);
 				a.push(i);
-			
 			};
 		};
 	};
@@ -64,19 +62,3 @@ NotesApplication.prototype.delete = function(note_id){
 NotesApplication.prototype.edit = function(note_id, new_content){
 	this.notes[note_id]= new_content;
 };
-
-
-
-
-
-// Test code inputs
-
-var bob = new NotesApplication("Bobby")
-var testText = ["ffhffjfjhrasjkbzdf", 12456, "gdghfhdsrtyuj", this.author, ugabvjkakjb];
-for(i=0; i<testText.length; i++){
-	bob.create(testText[i]);
-};
-console.log(bob.notes);
-bob.listNotes();
-bob.get(0);
-bob.edit(2, "dffgdhytjhgjjk")

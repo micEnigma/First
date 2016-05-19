@@ -72,11 +72,11 @@ NotesApplication.prototype.edit = function(note_id, new_content){
 // Test code inputs
 
 var bob = new NotesApplication("Bobby")
-var testText = ["ffhffjfjhrasjkbzdf", 12456, "gdghfhdsrtyuj", this.author, ugabvjkakjb];
-for(i=0; i<testText.length; i++){
-	bob.create(testText[i]);
-};
-console.log(bob.notes);
-bob.listNotes();
-bob.get(0);
-bob.edit(2, "dffgdhytjhgjjk")
+//var testText = ["ffhffjfjhrasjkbzdf", 12456, "gdghfhdsrtyuj", this.author, ugabvjkakjb];
+//for(i=0; i<testText.length; i++){
+//	bob.create(testText[i]);
+//};
+//console.log(bob.notes);
+//bob.listNotes();
+//bob.get(0);
+//bob.edit(2, "dffgdhytjhgjjk")
